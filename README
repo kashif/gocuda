@@ -1,0 +1,9 @@
+Go bindings for CUDA™.
+
+To build:
+  make install
+  
+To test:
+  make test
+  
+CUDA is a trademark and/or registered trademark of NVIDIA Corporation in the U.S. and other countries.
