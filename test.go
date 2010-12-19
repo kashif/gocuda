@@ -23,4 +23,9 @@ func main() {
 	if (err == 0) {
 		fmt.Printf("Device count: %d\n", count)
 	}
+	
+	major, minor, err := cuda.DeviceComputeCapability(device)
+	if (err == 0) {
+		fmt.Printf("Compute Capability: %d.%d\n", major, minor)
+	}
 }

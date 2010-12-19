@@ -44,3 +44,12 @@ func DeviceGetCount() (count, err int) {
 	err = int(cErr)
 	return
 }
+
+func DeviceComputeCapability(dev int) (major, minor, err int) {
+	var cErr, cMajor, cMinor C.int
+	cErr = C.int(C.cuDeviceComputeCapability(&cMajor, &cMinor, C.CUdevice(dev)))
+	major = int(cMajor)
+	minor = int(cMinor)
+	err = int(cErr)
+	return
+}
