@@ -5,7 +5,7 @@ TARG=cuda
 CGOFILES=\
 	cuda.go
 
-CGO_LDFLAGS=-lcuda
+CGO_LDFLAGS=-L/usr/local/cuda/lib -lcuda
 CGO_CFLAGS=-I/usr/local/cuda/include
 
 CLEANFILES+=test
